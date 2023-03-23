@@ -2,6 +2,7 @@ package com.example.desingpatterns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.desingpatterns.builder.FoodOrder
 import com.example.desingpatterns.factory.OSType
 import com.example.desingpatterns.factory.OperatingSystem
 import com.example.desingpatterns.factory.OperatingSystemFactory
@@ -14,7 +15,19 @@ class MainActivity : AppCompatActivity() {
 
         singletonExample()
         factoryExample()
+        builderExample()
 
+    }
+
+    private fun builderExample() {
+
+        val foodOrder = FoodOrder.Builder(this)
+            .bread("white bread")
+            .isVeg(false)
+            .fish("fish")
+            .condiments("olive oil")
+            .build()
+        foodOrder.getMealType()
     }
 
     private fun factoryExample() {
