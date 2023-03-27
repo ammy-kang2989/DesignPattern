@@ -47,6 +47,9 @@ class MainActivity : AppCompatActivity() {
         //With this implementation, we can use the AudioPlayer to play any type of audio file,
         // whether it's an mp3, vlc, or mp4, without worrying about the underlying implementation
         // details of each file type.
+
+        //* adapter
+        //Overall, the Adapter pattern is useful when you need to make two incompatible interfaces work together without modifying either of them. It provides a flexible and reusable solution to interface compatibility issues.
         mainAudioPlayer.play("mp4", "teri_ankho_me_udasi_kabhi_dekh_sakta_nhi")
     }
 
