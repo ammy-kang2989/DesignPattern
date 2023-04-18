@@ -1,11 +1,11 @@
 package com.example.desingpatterns.builder
 
-//In this example, we have a Person class with private constructor and a Builder class.
+//TODO ::--> In this example, we have a Person class with private constructor and a Builder class.
 // The Person class has three properties: name, age, and city.
 // The Builder class has three methods to set the properties and a build()
 // method to create a new instance of the Person class.
-//
-//In the main() function, we create a new instance of Person using the builder pattern.
+//*********************
+//TODO ::--> In the main() function, we create a new instance of Person using the builder pattern.
 // We set the properties using the builder methods and call build() method to get a new Person instance.
 // Finally, we print the values of the properties of the new Person instance.
 
