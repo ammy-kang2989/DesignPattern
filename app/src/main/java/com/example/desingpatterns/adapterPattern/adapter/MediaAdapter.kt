@@ -5,9 +5,9 @@ import com.example.desingpatterns.adapterPattern.players.MP3Player
 import com.example.desingpatterns.adapterPattern.playersInterface.AdvancedMediaPlayer
 import com.example.desingpatterns.adapterPattern.playersInterface.MediaPlayer
 
-class MediaAdapter(private val audioType: String)  : MediaPlayer {
+class MediaAdapter(audioType: String)  : MediaPlayer {
 
-    var advancedMediaPlayer : AdvancedMediaPlayer? = null
+    private var advancedMediaPlayer : AdvancedMediaPlayer? = null
 
     init {
         when(audioType){

@@ -2,18 +2,21 @@ package com.example.desingpatterns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.desingpatterns.adapterPattern.players.MainAudioPlayer
 import com.example.desingpatterns.builder.FoodOrder
 import com.example.desingpatterns.factory.OSType
 import com.example.desingpatterns.factory.OperatingSystem
 import com.example.desingpatterns.factory.OperatingSystemFactory
+import com.example.desingpatterns.sealedClasses.Shape
+import com.example.desingpatterns.sealedClasses.Square
 import com.example.desingpatterns.singleton.RetrofitSin
 
 //Design patterns are reusable solutions to the most commonly occurring software problems.
 // They can speed up the development process by providing a proven way of resolving frequent issues.
 
 class MainActivity : AppCompatActivity() {
-    lateinit var mainAudioPlayer: MainAudioPlayer
+    private lateinit var mainAudioPlayer: MainAudioPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +28,37 @@ class MainActivity : AppCompatActivity() {
         factoryExample()
         builderExample()
         adapterPatternExample()
+
+        var circle = Shape.Circle(34.0f)
+        var rect = Shape.Rectangle(3, 4)
+        var square = Square(10)
+
+        val noShape = Shape.NotAShape
+        checkShape(noShape)
+
+    }
+
+    private fun checkShape(shape: Shape) {
+
+        when(shape){
+            is Shape.Circle -> {
+
+                Log.e("TAG", "checkShape: circle shape" )
+            }
+
+            Shape.NotAShape -> {
+                Log.e("TAG", "checkShape: not a shape" )
+            }
+            is Square -> {
+                Log.e("TAG", "checkShape: square shape" )
+            }
+            is Shape.Rectangle -> {
+
+                Log.e("TAG", "checkShape: rectangle shape" )
+            }
+
+
+        }
 
     }
 

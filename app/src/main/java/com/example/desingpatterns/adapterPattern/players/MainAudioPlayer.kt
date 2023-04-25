@@ -5,7 +5,7 @@ import com.example.desingpatterns.adapterPattern.playersInterface.MediaPlayer
 
 class MainAudioPlayer : MediaPlayer {
 
-    lateinit var mediaAdapter: MediaAdapter
+    private lateinit var mediaAdapter: MediaAdapter
 
 
     override fun play(audioType: String, fileName: String) {
